@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- v1.1
+	
+	Greetings!
+
+This is the website for OpenPatterns Inc,
+developer of the Ents Database and OpenTranslator.
+
+The entire site is loaded once, and can be
+viewed offline.
+
+Sections are dynamically hidden and shown via
+Javascript. Never be subjected to intermittent
+internet problems, as the whole site is reachable
+without needing to talk back to the server.
+
+Specific pages can be loaded by using hashes like
+openpatterns.net/#ents
+
+With no large images or waiting for 3rd party
+services, and with the site being less than 0.1MB,
+I aim to respect the time of the user.
+
+Sections of the site are arranged in a tree,
+inspired by the Ents Database project.
+-->
+<head>
+<meta name="author" content="Jason Stockwell">
+<meta name="owner" content="OpenPatterns Inc.">
+<meta name="revised" content="Saturday, Dec 3rd, 2016">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="open,free,language,openpatterns,software,ents">
+<meta name="Classification" content="Business">
+<meta name="designer" content="Jason Stockwell">
+<meta name="distribution" content="Global">
+<meta name="rating" content="General">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="icon" href="icons/16x16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="icons/32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="icons/48x48.png" sizes="48x48" type="image/png">
+<link rel="icon" href="icons/62x62.png" sizes="62x62" type="image/png">
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/mobile_style.css" rel="stylesheet" type="text/css" media="only screen and (max-device-width: 700px), only screen and (max-width: 700px)" />
+<!-- dunno if this part really works...-->
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+</script>
+<![endif]-->
+
+<!-- Google analytics stuff... if you know of something better please let me know. -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-69912165-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<title>OpenPatterns</title>
+</head>
+
+<body>
+
+<header id="header">
+  <a onclick="home()"><h1>OpenPatterns</h1></a>
+</header>
+
+<!-- Top navigation bar. -->
+<nav id="top_bar">
+  <a id="projects_button" onclick="projects()">Projects</a>
+  <a id="about_button" onclick="about()">About</a>
+  <a id="support_button" onclick="support()">Support</a>
+</nav>
+
+<!-- Further Navigation bars are dynamically shown or hidden. -->
+
+<!-- Projects bar -->
+<nav id="projects_bar">
+  <a id="ents_button" onclick="ents()">EntsDatabase</a>
+  <a id="translator_button" onclick="trans()">OpenTranslator</a>
+  <a id="facts_button" onclick="facts()">FactsOrganizer</a>
+  <a id="lang_button" onclick="langHelp()">LanguageHelper</a>
+</nav>
+
+<!-- About bar -->
+<nav id="about_bar">
+  <a id="staff_button" onclick="staff()">Staff</a>
+  <a id="contact_button" onclick="contact()">Contact</a>
+</nav>
+
+<!-- Support bar -->
+<nav id="support_bar">
+  <a id="discuss_button" onclick="discuss()">Discuss</a>
+  <a id="develop_button" onclick="develop()">Develop</a>
+  <a id="donate_button" onclick="donate()">Donate</a>
+</nav>
+
+<!-- Section holding home page stuff -->
+<section id="home_section">
+<!-- Info on home page -->
+<div id="home_content">
+  <p>OpenPatterns designs, develops and organizes Free and Open Source Software.</p>
+  <p>Currently we are focusing on projects involving new ways to approach language translation, analysis and education, and systems designed to accomplish this.</p>
+
+  <p><a class="link" onclick="trans()">OpenTranslator</a> will provide the user with <i>many possible translations to choose from</i>, and <i>detailed information</i> about each one, allowing them to convey extremely precise meanings. It will also include tools to help many people work together to improve translations by quickly and easily adding words and grammars. Anyone can create their own language database to share with others, for fun, business or to preserve endangered languages.</p>
+  <p>The <a class="link" onclick="ents()">Ents database</a> library is a special type of database designed to organize complex information, and will be used extensively to enable the unique features of <a class="link" onclick="trans()">OpenTranslator</a>. Ents will provide a way to easily store and edit factual information and share it with others. It's general design allows it to store information about many things, like molecules, plants and animals, baseball players, or food recipies. This information can then be analyzed to enable new types of software applications like dynamic encyclopedias.</p>
+</div>
+</section>
+
+
+<!-- Section for content of the about pages. -->
+<section id="about_section"><content>
+
+<!-- General about info -->
+<div id="about_content">
+  <h1>About OpenPatterns</h1>
+  <p>Hey! I'm <a class="link" onclick="staff()">Jason</a> and I started OpenPatterns Inc to help create amazing software for anyone to use. Coming up with the initial project ideas on my own, I could either sell them, bring them with me to a company, or make them public. I chose the latter because the ideas are very important to me.</p>
+  <p>OpenPatterns' software projects will revolutionize language learning, enable highly accurate language translation, preserve rare or dying languages, organize and analyze scientific and encyclopedic information, and much more.</p>
+  <p>Tools for language and education ideally shouldn't be "owned" and held as secrets. Furthermore, retaining the exclusive rights to sell a product isn't always necessary or desirable for innovation.</p>
+  <p>The rights to language and learning are sacred.</p>
+  <p><i>OpenPatterns acts as a trusted intermediary, allowing you to directly support these revolutionary projects monetarily.</i></p>
+  <h2>How donations are used</h2>
+  <p>By supporting OpenPatterns, you firstly support its employees by paying wages and for them to be equipped to work properly. To work fulltime on these projects, I and others will require fair compensation. I believe the importance of these projects justifies fair compensation. While I determine my own compensation, the amount will be made public and hopefully seen as reasonable.</p>
+  <p>Donations exceeding employee wages will go directly towards furthering projects. Primarily this will be done via compensating Independent Contractors, allowing them to devote more than their free time. Funds may also be used for things like servers, should they be deemed necessary for the community.</p>
+  <p>Specifics of how donations are used can be found on the <a class="link" onclick="donate()">Donate</a> page.
+  <p>OpenPatterns Inc. is not a federally tax-exempt organization. To be tax-exempt, all received donations must be used strictly for tax-exempt purposes. Among other similar reasons, OpenPatterns does not qualify because someone could use the translator to produce political propaganda in different languages. This is unfortunate and OpenPatterns will try to raise the awareness of such issues so that society can take these new technologies into account. Nonetheless, it is of my opinion that these projects will greatly help the public, and that by developing them openly, uses not furthering the public good will be mitigated as much as possible.</p>
+  <p>Jason Stockwell</br>President</p>
+</div>
+
+<!-- Staff section starts here. -->
+<div id="staff_content">
+  <h2>Jason Stockwell</h2>
+  <p>Hello, I'm the Founder and President of OpenPatterns Inc.</p>
+  <p>I'm 25 years old and currently live in Massachusetts.<p>
+  <p>I am a <i>scientist</i> in the true sense of the word!</p>
+  <p>I'm the sole designer and developer of the only working English to Elvish Translator, available on the Google Play Store for free. You can find it <a class="link" target="_blank" href="https://play.google.com/store/apps/details?id=com.elvish2">here</a>. It's the proof-of-concept <a class="link" onclick="trans()">OpenTranslator</a> will be loosely based off of and has many features you won't find anywhere else. I am very proud of it, please have a look!</p>
+  <p><a class="link" target="_blank" href="/documents/jasonStockwellResume.pdf">Resume</a></p>
+  <p><a class="link" target="_blank" href="https://www.linkedin.com/in/jason-stockwell-85738097">LinkedIn Profile</a></p>
+  <p>My major interests include theoretical physics, language, psychology, programming, mythology, evolution, consciousness, progressive rock, yoga and meditation.</p>
+  <p>For those who care, I'm a Meyers Briggs personality type <a class="link" target="_blank" href="https://en.wikipedia.org/wiki/INTP#INTP_characteristics">INTP</a>.</p>
+  <p>I enjoy playing games from time to time. Particularly MMOs, RPGs and card games. Recently I've been playing Hearthstone. I like both Arena and Constructed; my main decks are custom Pirate Rogue and Control Warlock (meta permitting).<p>
+  <p>I casually recomend everyone read <i>The Silmarillion</i>, <i>Ready Player One</i>, <i><a class="link" target="_blank" href="http://www.amazon.com/The-Interpretation-Language-Vol-II/dp/0876680864">The Interpretation of Language</a></i>, and <i><a class="link" target="_blank" href="http://www.amazon.com/Science-Yoga-I-K-Taimni/dp/1502492164">The Science of Yoga</a></i>.
+  <p>I also geek out to Adventure Time, Yes, and Van der graaf Generator. I am quite obsessed with Jon Anderson and Peter Hammill.</p>
+  <p>I'm very interested in human biology, especially relating to diet and consciousness. Particularly, I'm an expert on essential fatty acids and inflammation, having read over 150 scientific papers on that subject alone. I have been known to evangelize Omega-3s.</p>
+  <p>I like to do awesome stuff.</p>
+</div>
+
+<!-- Contact section -->
+<div id="contact_content">
+  <h2>Contact OpenPatterns</h2>
+  <p>Please contact Jason Stockwell directly by email: openpatterns37[at]gmail</p>
+  <p>Or, if you think others would benefit from the response being public, you can post a question on the <a class="link" target="_blank" href="https://www.reddit.com/r/openpatterns">OpenPatterns Reddit page</a>.
+</div>
+
+</content></section>
+
+
+<!-- Big section for content of the project pages. -->
+<section id="proj_section">
+
+<div id="proj_content">
+
+<!-- General project info here. -->
+<div id="general_content">
+  <h1>Projects Overview</h1>
+  <h2>Project summaries</h2>
+  <p><a class="link" onclick="ents()">Ents</a>, a revolutionary database, integral to the other projects, that stores complex factual information for smart analysis. Development will first start with Ents to enable the others.</p>
+  <p><a class="link" onclick="trans()">OpenTranslator</a>, an innovative language translator built for accuracy and education.</p>
+  <p><a class="link" onclick="langHelp()">LanguageHelper</a>, an application which gives detailed information about a text, including linguistic components and grammatical correctness.</p>
+  <p><a class="link" onclick="facts()">FactsOrganizer</a>, a powerful database editor and analyzer for Ents databases.</p>
+  <h2>More about projects</h2>
+  <p>These projects are interrelated and interdependent. All projects are currently in the design stage. Our intent is to show that the development path forward is well known, and the destination exciting.</p>
+  <p>The proof-of-concept translator can be found <a class="link" target="_blank" href="https://play.google.com/store/apps/details?id=com.elvish2">here</a> on the Google Play Store, running on Android. It translates a subset of English to one of J.R.R. Tolkien's elvish languages, but the ideas used within can be expanded on and applied to all languages. The other projects evolved throughout the long process of developing and improving the translator.
+  <h2>Help make these projects happen!</h2>
+  <p>Because these projects themselves will not be sold, OpenPatterns generates revenue exclusively through voluntary donations from the public. Donations to OpenPatterns Inc. are unfortunately not tax deductible because these projects can be used in many ways, including for non-exempt purposes.</p>
+  <p>OpenPatterns supports these projects by leading their further development, helping to organize them, and compensating certain developers and contributors as it chooses.</p>
+  <p>I ask for your support in furthering these projects for the use of all people. I sincerely urge caution before you choose to donate to competing projects. As the visionary and original designer, I hope to build trust with the community so that those wishing to support these projects are comfortable donating to to OpenPatterns Inc, knowing that their resources are being used efficiently, and ethically.</p>
+  <p>Jason Stockwell</p>
+</div>
+
+<!-- Ents content starts here. -->
+<div id="ents_content">
+  <h1>Ents</h1>
+  <p>Ents is a revolutionary database technology currently being designed that organizes factual information for smart analysis and editing. Things, or entities, are stored using a special type of hierarchal tree. All current projects supported by OpenPatterns will use Ents as a powerful tool to organize large amounts of complex information.</p>
+  <p>The specially designed structure behind Ents databases makes it possible to store and efficiently edit the words and grammar of a language for use in <a class="link" onclick="trans()">OpenTranslator</a> and <a class ="link" onclick="langHelp()">LanguageHelper</a>. But it can do much more.</p>
+  <h2>Links</h2>
+  <p><a class="link" target="_blank" href="https://github.com/OpenPatternsInc/EntsCpp">Ents C++ Github (active)</a></p>
+  <p><a class="link" target="_blank" href="https://github.com/OpenPatternsInc/EntsDatabase">Ents Java Github (inactive)</a></p>
+  <p><a class="link" target="_blank" href="https://www.youtube.com/watch?v=2S5iMBF0ZdA">15 minute video discussing Ents (Youtube)</a></p>
+  <p><a class="link" target="_blank" href="/documents/entsDescriptionAndAPI.pdf">Semi-technical paper discussing Ents theory and basic target API</a></p>
+  <p><a class="link" target="_blank" href="https://www.reddit.com/r/entsdatabase">Discuss Ents at its Reddit page</a></p>
+  <h2>Example: Categorizing Animals</h2>
+  <p>An Ents database could organize many different types of animals. In this example Ents organizes the information in the background, while <a class="link" onclick="facts()">FactsOrganizer</a> provides the user interface, displays analysis, and facilitates editing. </p>
+  <p>The animals could be in categories such as "mammals", "reptiles", and "birds", and within those categories there could be more such categories, for instance under "mammals" one could have "primates" and "marsupials", and so on. </p>
+  <p>Ents categories are not like the folders on a computer filesystem, where the contents of one folder usually don't overlap with another. Ents allows categories to share entities, make categories exclusive to one another, and uses this information to help the user.</p>
+  <p>Under the category of "animals", there could be "land animals", "aquatic animals", "amphibious animals", etc. Certain animals could be both land animals and mammals, while another group could be both land animals and reptiles. While no mammals may also be reptiles, land animals may overlap with the other two. Thus mammals and reptiles are exclusive to one another, but mammals and land animals are not. </p>
+  <p>By defining how categories relate to each other, special things can be done. If one were to add a new animal, software using Ents could automatically ask the question "is this animal a mammal, reptile, or bird." If the user indicates that it is a mammal, the software can then automatically categorize it further by asking "is it a primate or a marsupial?" If the answer is "primate", the software then knows it can't possibly be an aquatic animal, because primates are exclusively land animals.</p>
+  <p>Automatically asking relevant questions, and not asking unnecessary or illogical ones, helps the user efficiently add new information to the database. One does not have to sift through thousands of attributes to correctly add an animal, Ents would allow the software to ask only relevant options. It would also prevent the user from forgetting to add an attribute.</p>
+  <p>Analyzing the populated database, one could compare two animals, and the software would automatically find similarities and differences, and present them to the user. For instance, it could retrieve all animals that live in a certain area, or more specifically list all animals from a certain area that eat a certain type of plant, etc.</p>
+  <p>Furthermore, if the user were to "look up" information about a chimpanzee, software could analyze the tree and automatically generate a description like "chimpanzees are omnivorous primates that live in central and western Africa." This text was not "written" beforehand. It was generated using the database. If the database were changed, the description would change to reflect this. Thus a single Ents database can provide dynamically created general descriptions of entities and how they relate to others, similar to contemporary encyclopedias, while at the same time enabling sophisticated analysis of those entities as per the user's need.</p>
+  <p>Ents helps make very sophisticated software possible. It's used extensively in <a class="link" onclick="facts()">FactsOrganizer</a>, <a class ="link" onclick="langHelp()">LanguageHelper</a> and <a class="link" onclick="trans()">OpenTranslator</a>.</p>
+  <h2>The name "Ents"</h2>
+  <p>Ents is so named for a few reasons. Originally the main software objects in-code were called "Entities", and the project itself was called "Organizer". After typing "entities" over and over again in the code, that was quickly shortened to "ents", which seemed like a good project name as well. Perhaps not coincidentally, ents are the fictional talking and moving trees of J.R.R. Tolkien's Arda. Because Ents organizes information in a special type of logical "tree", and the purpose of Ents was originally to organize words and grammar for an elvish translator to translate one of Tolkien's languages.</p>
+</div>
+
+<!-- OpenTranslator content starts here. -->
+<div id="trans_content">
+  <h1>OpenTranslator</h1>
+  <p>OpenTranslator is an open source language translation application currently being designed. Utilizing revolutionary methods it will offer unique features like context gathering and post-translation analysis to allow for extremely accurate and customized translations never before possible. Additionally, by using <a class="link" onclick="facts()">FactsOrganizer</a>, <i>anyone around the world</i> will be able to create and edit standardized language databases which will contain detailed information about how languages fit together. Then another user can download the databases for two different languages and OpenTranslator will automatically translate sentences between them <i>without the need for an internet connection</i>.</p>
+  <p>And, of course, being open source, it will be available free of charge.</p>
+  <p>OpenTranslator exemplifies the essence of OpenPatterns. All languages share common patterns such as parts of speech, tenses, irregularities, and use of syntax. OpenTranslator is designed with these patterns in mind to provide a scalable framework for describing a language and its elements. This allows the meaning of a sentence to be deciphered, ensuring an accurate translation <i>based on what was originally intended</i>. These open resources can not only be used by anyone to translate novels and scientific papers, but also to <i>preserve endangered languages in high detail</i>, allowing people around the world to study, learn and use them. In addition, the same databases used by OpenTranslator will be compatible with its sister-application, <a class ="link" onclick="langHelp()">LanguageHelper</a>, for those who want to study a language, even their own, and learn how it works in depth.</p>
+  <p>These innovative approaches allow for new features not yet seen in software translation; most importantly, <i>asking questions to get context</i>. If a sentence could be interpreted in multiple ways, OpenTranslator will ask the user questions to determine the correct interpretation. Furthermore, if a single word in one language corresponds to multiple different words in another, the user can choose which is best to translate into. This allows the user to utilize the nuances of the target language.</p>
+  <p>An important and significant distinction is that if the input text is not grammatically correct, the translation will <i>not occur because no accurate translation is even possible</i>. Instead, detailed explanations of the grammatical problems are given, allowing the user to correct them. Only when proper corrections have been made will the translation be done.</p>
+  <p>It will even give you a detailed description of the translation results, similar to how <a class ="link" onclick="langHelp()">LanguageHelper</a> lets you analyze a sentence. You'll be able to read details on each word and section of the sentence, giving you insight into <i>why</i> the translation was done the way it was. It will also give you different optional choices for how to tweak your translation, and what those tweaks will mean.</p>
+  <p>Though there is no demo yet for the full translator, the important hurdles have been thoroughly tackled in the free proof-of-concept translator which can be found <a class="link" target="_blank" href="https://play.google.com/store/apps/details?id=com.elvish2">here</a> for Android on the Google Play store. It perfectly translates a small subset of English to Elvish, but the same ideas can be applied to all languages. It shows that the basic algorithms and methods are sufficient to prove the veracity of all of the above claims.</p>
+  <h2>Links</h2>
+  <p><a class="link" target="_blank" href="https://www.reddit.com/r/opentranslator">OpenTranslator's Reddit page</a></p>
+  <h2>More about OpenTranslator</h2>
+  <p>Translations using even the most popular computer-based translators are so incorrect they are strangely entertaining. Translate a sentence and then translate it back for a good laugh at your next party or social gathering. OpenTranslator was designed to avoid such problems.<p>
+  <p>OpenTranslator is <i>very</i> different from other software translators. First of all, it's completely Open Source so you can learn how it works, change it to suit your specific needs, and even improve it for others if you choose.</p>
+  <p>Unfortunately, the process of preparing a language for use in OpenTranslator is time consuming because of the amount of detail required. This problem is drastically reduced by using the special application <a class="link" onclick="facts()">FactsOrganizer</a> to edit smart <a class="link" onclick="ents()">Ents</a> databases. It is the intention that <a class="link" onclick="facts()">FactsOrganizer</a> will be made in such a way that many people all over the world will be able to work together to create language databases. There may be mistakes created in this way, but anyone will then be able to fix these mistakes, and there will be ways to let you download language databases only from individuals or groups you trust to be accurate. Furthermore, utilizing the revolutionary smart design of the <a class="link" onclick="ents()">Ents</a> database, adding and editing words and grammar will be so easy and streamlined even middle school children with minimal linguistic knowledge could do it.</p>
+  <h2>The idea for OpenTranslator</h2>
+  <p>The idea for OpenTranslator came from me, <a class ="link" onclick="staff()">Jason Stockwell</a>, OpenPatterns' president. I'd wanted to make a translator for J.R.R. Tolkien's elvish languages ever since I was a Tolkien-obsessed 13 year old learning how to program back in 2004. I was amazed that there were online translators for many languages, but none for elvish. I soon found that making my own translator was an unweildy undertaking but I always kept it in the back of my mind. Using many of the same ideas I had back then, I finally made it in 2012 as an Android app available <a class="link" target="_blank" href="https://play.google.com/store/apps/details?id=com.elvish2">here</a> for free on the Google Play store.</p>
+  <p>But of course the same methods still apply to other languages, not just English and Quenya (high tongue of the elves exiled from Valinor).</p>
+  <p>In fact, OpenTranslator is a <i>completely original design</i>, and the reason there is no other working elvish translator is because contemporary methods for machine translation require millions of pre-translated sources to statistically analyze. That same reason is why even sentences of utter nonsense can be "translated" with no apparent problem by contemporary translators. OpenTranslator approaches the problem from a completely different direction. This enables the new and sophisticated features not found anywhere else.</p>
+  <p>I hope you're as excited for the future of OpenTranslator as I am!</p>
+</div>
+
+<!-- FactsOrganizer content starts here. -->
+<div id="facts_content">
+  <h1>FactsOrganizer</h1>
+  <p>FactsOrganizer is a software project in preliminary development designed to organize and analyze information stored in an <a class="link" onclick="ents()">Ents</a> database. It's designed to make it easy for anyone to create their own database or edit someone else's.</p>
+  <p>For big databases like the example of organizing animals in the <a class="link" onclick="ents()">Ents</a> section, or to categorize a language and its words and rules, many people will be able to work together editing the same database, and then anyone will be able to use that database however they want. One could categorize and explore players in a baseball league, molecules found in the liver, or items in a computer game, and then analyze those elements in sophisticated ways.</p>
+  <h2>Links</h2>
+  <p><a class="link" target="_blank" href="https://www.reddit.com/r/factsorganizer">FactsOrganizer's Reddit page</a></p>
+  <h2>More about FactsOrganizer</h2>
+  <p>FactsOrganizer is also the application that will be used to edit the standardized language databases for use in <a class ="link" onclick="langHelp()">LanguageHelper</a> and <a class="link" onclick="trans()">OpenTranslator</a>. This will make it easy to add and edit the language databases, even for someone who is not an expert linguist.</p>
+  <p>It is expected that FactsOrganizer will be extremely useful for many diverse areas and revolutionize the organizing of scientific and encyclopedic information.</p>
+  <p>Please see the <a class="link" onclick="ents()">Ents</a> page for more details about how FactsOrganizer will be used.</p>
+</div>
+
+<!-- LanguageHelper content starts here -->
+<div id="lang_content">
+  <h1>LanguageHelper</h1>
+  <p>LanguageHelper is a project currently in design that analyzes text, displaying relevant and detailed information about the elements that make it up. It uses extensive knowledge about a language to determine if a sentence is grammatically correct. If it is incorrect, it will even give a description of what is wrong. Students of a language can improve their knowledge by entering a sentence and learning about how it fits together, or what is wrong with it.</p>
+  <p>A student of linguistics can also learn by seeing what parts of speech a word is, the form of the word used, the various elements of the sentence, such as the subject of a verb, and many more things.</p>
+  <p>LanguageHelper uses the same standardized <a class="link" onclick="ents()">Ents</a> database for a language that <a class="link" onclick="trans()">OpenTranslator</a> uses, which can be edited and customized in <a class="link" onclick="facts()">FactsOrganizer</a> to fit the user's needs.</p>
+  <h2>Links</h2>
+  <p><a class="link" target="_blank" href="https://www.reddit.com/r/languagehelper">LanguageHelper's Reddit page</a></p>
+</div>
+
+<!-- End of project content -->
+</div></section>
+
+
+<!-- Support section for content -->
+<section id="support_section"><content>
+
+<div id="support_content">
+  <h1>How to support these projects</h1>
+  <p>Free and Open Source Software relies on contributions from the public.</p>
+  <p>Major ways to help the projects of OpenPatterns are to <i><a class="link" onclick="discuss()">discuss</a> their theory and implementation</i>, directly <i><a class="link" onclick="develop()">develop</a> code and resources</i>, and <i><a class="link" onclick="donate()">donate</a> funds</i> so that OpenPatterns can compensate significant contributors.</p>
+  <h3><a class="link" onclick="discuss()">Discuss</a></h3>
+  <p>Discussing projects helps make them better! What features do you want to see? Do you have a new way of looking at things? Interested in seeing how things are going?</p>
+  <h3><a class="link" onclick="develop()">Develop</a></h3>
+  <p>Software needs coders! Get in on the ground level and help build important applications!</p>
+  <h3><a class="link" onclick="donate()">Donate</a></h3>
+  <p>OpenPatterns makes no money by selling or licensing its projects. In order to enable key contributors to work on these projects in more than just their spare time, donations from the public are crucial and will be used transparently and efficiently.</p>
+  <h3>Other Links:</h3>
+  <p><a class="link" target="_blank" href="https://www.youtube.com/channel/UClxKd8QA9_8Ea1neJx5SV2g">Youtube channel</a></p>
+  <p><a class="link" target="_blank" href="https://www.facebook.com/OpenPatterns-439754486227986">Facebook page</a></p>
+  <p><a class="link" target="_blank" href="https://twitter.com/OpenPatternsInc">Twitter</a></p>
+  <p><a class="link" target="_blank" href="https://github.com/OpenPatternsInc">Github Code Repository</a></p>
+</div>
+
+<!-- Section explaining where to discuss projects -->
+<div id="discuss_content">
+  <h1>Discuss Ideas and Theory</h1>
+  <p>The discussion of ideas about features, theory and algorithms is paramount. We need to determine goals and make sure we have a solid theoretical base to accomplish them.</p>
+  <p>Even if you've never written a line of code, we could use your insight in many different ways. These projects are multidisciplinary, so if you think you can help in any way, please consider doing so.</p>
+  <p>Because these projects will be used heavily by 3rd party applications, they need to be designed with generality and modularity. The Ents database for example will be used by many future software projects in addition to OpenPatterns', so it must be designed carefully to be optimally useful. Thinking things out will save the coders from many headaches down the road.</p>
+  <p><i>Even those who can't write code could be chosen to receive OpenPatterns funds, if they contribute significantly in ways others can't. A great idea can save a lot of development time, or enable a feature that wouldn't even be possible!</i></p>
+  <p>Specifically for the language-related projects, we need <b>linguists</b> and language enthusiasts to help make sure <a class="link" onclick="trans()">OpenTranslator</a> and <a class ="link" onclick="langHelp()">LanguageHelper</a> are feature-rich, and <a class="link" onclick="ents()">Ents</a> and <a class="link" onclick="facts()">FactsOrganizer</a> can handle language properly. The ability to clearly explain linguistic elements and patterns will be crucial for their implementation in code.</p>
+  <p>If you see yourself using the projects in the future, what would you like to see them do? What specific way will you be using the projects, and what special cases need to be addressed? Maybe your language has a unique grammatical pattern or rare part of speech, or you need to organize data in a way we haven't thought of.</p>
+  <h2>Links</h2>
+  <p>OpenPatterns has set up <b>Reddit</b> groups where we can communicate. Reddit already has many users and is easy to pick up. Later discussion may move to another platform if necessary or desirable.</p>
+  <p><a class="link" target="_blank" href="https://www.reddit.com/r/openpatterns">Main OpenPatterns subreddit</a></p>
+  <p><a class="link" target="_blank" href="https://www.reddit.com/r/entsdatabase">Ents Database subreddit</a></p>
+  <p><a class="link" target="_blank" href="https://www.reddit.com/r/opentranslator">OpenTranslator subreddit</a></p>
+  <p><a class="link" target="_blank" href="https://www.reddit.com/r/factsorganizer">FactsOrganizer subreddit</a></p>
+  <p><a class="link" target="_blank" href="https://www.reddit.com/r/languagehelper">LanguageHelper subreddit</a></p>
+</div>
+
+<!-- Section explaining project development -->
+<div id="develop_content">
+  <h1>Develop Code</h1>
+  <p>There wouldn't be software without code and algorithms! And what goes better with code than documentation?</p>
+  <p>OpenPatterns is seeking <i>hardcore programmers and problem solvers</i> to form the core development team and create the next generation of interactive software technology. We'll make software everyone will one day use, helping people to learn and communicate better, and do things currently not possible.</p>
+  <p>Initially, experienced coders are needed to plan out APIs and code architecture to accomplish what we set out to do. Basic architecture and algorithms have been designed by <a class="link" onclick="staff()">OpenPatterns' head</a>, but there are many details to work out and much room for improvement.</p>
+  <p><i>We aren't looking for only expert programmers, we would like to collaborate with any problem solvers. Any expert programmer can turn your theory into code; what we need are revolutionary ideas, in and out of code.</i></p>
+  <h2>Just the beginning</h2>
+  <p>These projects are in their infancy. Get involved now and see how they work from the start.</p>
+  <p>The first step is to develop the Ents Database to organize the information for the other projects.</p>
+  <p><a class="link" target="_blank" href="https://github.com/OpenPatternsInc">Github Link</a></p>
+  <p>Even if you're new to programming, you'll at least learn a thing or two. A major goal of OpenPatterns is to <i>heavily</i> document all code so that it is easy to expand and learn. Documenting code will be important down the line as people customize the projects to suit their needs. Code produced should be so well documented it becomes almost like a lesson in itself.</p>
+  <p>We want as many people as possible to understand what these new types of software do, so that they can maximize the benefit they get, and understand the ramifications as deeply as possible.</p>
+  <h2>Multi-platform</h2>
+  <p>These technologies should be offered on as many different platforms as possible, and could become new standards for the next generation of computer programs to build off of. By creating standardized applications and libraries on multiple platforms, we can help content creators develop more sophisticated and useful applications.</p>
+  <p><i>Please consider contributing in any way you can to these important projects!</i></p>
+</div>
+
+<!-- Section explaining donation stuff. Contains a paypal button at the top and bottom. -->
+<div id="donate_content">
+
+<p></p>
+
+<div class="paypal">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="YDZTLTJAHURS8">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+</div>
+
+  <h1>Exactly how donations will be used</h1>
+  <h3>Jason Stockwell</br>President of OpenPatterns Inc.</h3>
+  <p>Monetary contributions are vital to OpenPatterns' goal of creating open source software for people to use and customize how they choose.</p>
+  <p>By donating to OpenPatterns Inc, you will <i>directly</i> fund the original designer and those whom he trusts and values to develop these projects. <i>Donating is an effective way to help bring these innovations to fruition.</i></p>
+  <p>Because I won't sell the products made with the help of OpenPatterns, I hope that many people will appreciate my hard work and expertise and support me voluntarily. They will know that I will use their funds to effectively facilitate better and faster development.</p>
+  <p>I believe this is <i>the right way</i> to develop these important ideas. They shouldn't be private, but rather firmly planted in the public domain, just like scientific theories.</p>
+  <p></br>OpenPatterns will not be publicly traded, and will have no significant assets besides received donations.</p>
+  <p>Additional revenues exceeding my initial compensation and regular wage will go towards compensating key theorists, developers, designers, and others as independent contractors so that they may be able to devote significant energy towards the projects. I may eventually hire additional employees as well. The scale and stucture of this will be determined by the level of funds raised.</p>
+  <p>Down the road, funds may also be used for purchasing and maintaining hardware like servers, should they be useful. For instance, it will probably be the case that many people will add to and edit large databases storing information on many different languages, and maybe it would make sense to store these databases on dedicated servers. By having OpenPatterns maintain these servers, access could be offered free of charge.</p>
+  <p><i>Although OpenPatterns Inc. aspires to provide infomation and software for the public good free of charge, and is funded primarily by donations from the public, it is not a tax-exempt organization or charity, and donations to OpenPatterns are not tax deductible</i> because these projects could be used for non-exempt purposes. For instance, a politician could use OpenTranslator to facilitate the production of propaganda in multiple languages, something the IRS expressly lists as a nonexempt activity. While this type of possibility is unfortunate, these projects will remove barriers of communication and greatly help spread beneficial information and critical knowledge to many people around the world.</p>
+  <p>I ask that you consider contributing monetarily so that I and others are able to work hard developing these revolutionary and open ideas, bringing them to the world.</p>
+  <p></br>Jason Stockwell</br>President of OpenPatterns Inc.</br></p>
+
+<p class="paypal">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="YDZTLTJAHURS8">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+</p>
+
+</div>
+
+</content></section>
+
+
+<!-- Section shown after donating -->
+<section id="donation_successful_section">
+<!-- content -->
+<div id="donation_successful_content">
+  <h2>Donation Successful</h2>
+  <p>Thank you! Your donation is greatly appreciated.</p>
+  <p>If everything went fine you should soon receive a receipt via email.</p>
+  <p><a class="link" onclick="home()">Return to Homepage</a></p>
+</div>
+</section>
+
+
+<footer>
+  <p>&copy;2016 OpenPatterns Inc.</p>
+</footer>
+
+<noscript><p>*Requires JavaScript for now, sorry.*</p></noscript>
+
+
+<!-- JavaScript to handle dynamic content changes. -->
+<script type="text/javascript">
+
+//setup variables to be used over and over
+//regular button color, color of currently selected section, and color of parent sections
+var button_color = "#FFFFFF", selected_color = "#64FFDA", parent_color="#64FFDA";
+//top of page, to scroll to when needed
+header = document.getElementById("header");
+top_bar = document.getElementById("top_bar");
+//home page stuff
+home_section = document.getElementById("home_section");
+home_content = document.getElementById("home_content");
+//things to do with about section
+about_button = document.getElementById("about_button");
+staff_button = document.getElementById("staff_button");
+contact_button = document.getElementById("contact_button");
+//to do with about content
+staff_content = document.getElementById("staff_content");
+contact_content = document.getElementById("contact_content");
+about_content = document.getElementById("about_content");
+about_section = document.getElementById("about_section");
+//things to do with project sections
+projects_button = document.getElementById("projects_button");
+ents_button = document.getElementById("ents_button");
+trans_button = document.getElementById("translator_button");
+facts_button = document.getElementById("facts_button");
+lang_button = document.getElementById("lang_button");
+proj_section = document.getElementById("proj_section");
+proj_name = document.getElementById("proj_name");
+//these are the divs containing the content
+ents_content = document.getElementById("ents_content");
+trans_content = document.getElementById("trans_content");
+facts_content = document.getElementById("facts_content");
+lang_content = document.getElementById("lang_content");
+general_content = document.getElementById("general_content");
+//support stuff
+support_section = document.getElementById("support_section");
+support_content = document.getElementById("support_content");
+support_button = document.getElementById("support_button");
+discuss_button = document.getElementById("discuss_button");
+discuss_content = document.getElementById("discuss_content");
+develop_button = document.getElementById("develop_button");
+develop_content = document.getElementById("develop_content");
+donate_button = document.getElementById("donate_button");
+donate_content = document.getElementById("donate_content");
+//successful donation stuff
+donation_successful_section = document.getElementById("donation_successful_section");
+//set hash variables
+var projects_hash = "projects", about_hash = "about", support_hash="support", staff_hash = "staff", contact_hash="contact";
+var discuss_hash = "discuss", develop_hash = "develop", donate_hash = "donate";
+var ents_hash = "ents", trans_hash = "opentranslator", facts_hash = "factsorganizer", lang_hash = "languagehelper";
+var donation_successful_hash = "donation_successful";
+
+/*Collection of functions based on what is clicked/tapped.*/
+
+function home() {
+  reset();
+  setTitle("OpenPatterns.net");
+  home_section.style.display = "block";
+  setHash("");
+}
+
+function projects() {
+  reset();
+  setTitle("OpenPatterns Projects");
+  showProjectsNav();
+  showProjectSection();
+  about_button.style.color = button_color;
+  projects_button.style.color = selected_color;
+  support_button.style.color = button_color;
+  general_content.style.display = "block";
+  setHash(projects_hash);
+}
+
+function about() {
+  reset();
+  setTitle("About OpenPatterns");
+  showAboutNav();
+  showAboutSection();
+  about_button.style.color = selected_color;
+  projects_button.style.color = button_color;
+  support_button.style.color = button_color;
+  contact_button.style.color = button_color;
+  about_content.style.display = "block";
+  setHash(about_hash);
+}
+
+function support() {
+  reset();
+  setTitle("Support OpenPatterns");
+  showSupportNav();
+  showSupportSection();
+  support_button.style.color = selected_color;
+  projects_button.style.color = button_color;
+  about_button.style.color = button_color;
+  support_content.style.display = "block";
+  setHash(support_hash);
+}
+
+function ents() {
+  projects();
+  setTitle("Ents");
+  projects_button.style.color = parent_color;
+  ents_button.style.color = selected_color;
+  general_content.style.display = "none";
+  ents_content.style.display = "block";
+  header.scrollIntoView(true);
+  setHash(ents_hash);
+}
+
+function trans() {
+  projects();
+  setTitle("OpenTranslator");
+  projects_button.style.color = parent_color;
+  trans_button.style.color = selected_color;
+  general_content.style.display = "none";
+  trans_content.style.display = "block";
+  header.scrollIntoView(true);
+  setHash(trans_hash);
+}
+
+function facts() {
+  projects();
+  setTitle("FactsOrganizer");
+  projects_button.style.color = parent_color;
+  facts_button.style.color = selected_color;
+  general_content.style.display = "none";
+  facts_content.style.display = "block";
+  header.scrollIntoView(true);
+  setHash(facts_hash);
+}
+
+//"lang()" is reserved by JS
+function langHelp() {
+  projects();
+  setTitle("LanguageHelper");
+  projects_button.style.color = parent_color;
+  lang_button.style.color = selected_color;
+  general_content.style.display = "none";
+  lang_content.style.display = "block";
+  header.scrollIntoView(true);
+  setHash(lang_hash);
+}
+
+function staff() {
+  about();
+  setTitle("OpenPatterns Staff");
+  about_button.style.color = parent_color;
+  staff_button.style.color = selected_color;
+  about_content.style.display = "none";
+  staff_content.style.display = "block";
+  contact_content.style.display = "none";
+  showAboutSection();
+  setHash(staff_hash);
+}
+
+function contact() {
+  about();
+  setTitle("Contact OpenPatterns");
+  about_button.style.color = parent_color;
+  contact_button.style.color = selected_color;
+  about_content.style.display = "none";
+  staff_content.style.display = "none";
+  contact_content.style.display = "block";
+  showAboutSection();
+  setHash(contact_hash);
+}
+
+function discuss() {
+  support();
+  setTitle("Discuss Projects");
+  support_button.style.color = parent_color;
+  discuss_button.style.color = selected_color;
+  support_content.style.display = "none";
+  discuss_content.style.display = "block";
+  showSupportSection();
+  setHash(discuss_hash);
+}
+
+function develop() {
+  support();
+  setTitle("Help Develop Code");
+  support_button.style.color = parent_color;
+  develop_button.style.color = selected_color;
+  support_content.style.display = "none";
+  develop_content.style.display = "block";
+  showSupportSection();
+  setHash(develop_hash);
+}
+
+function donate() {
+  support();
+  setTitle("Donate to OpenPatterns Inc.");
+  support_button.style.color = parent_color;
+  donate_button.style.color = selected_color;
+  support_content.style.display = "none";
+  donate_content.style.display = "block";
+  showSupportSection();
+  setHash(donate_hash);
+}
+
+//the page shown after successful donation
+function donationSuccessful() {
+  reset();
+  setTitle("Donation Successful");
+  donation_successful_section.style.display = "block";
+  top_bar.style.display = "none";
+  //don't need to really set a hash because people won't be linking to this page
+  setHash("");
+}
+
+
+//reset things to do with the projects
+function resetProjects() {
+  ents_button.style.color = button_color;
+  trans_button.style.color = button_color;
+  facts_button.style.color = button_color;
+  lang_button.style.color = button_color;
+  showProjectSection();
+  ents_content.style.display = "none";
+  trans_content.style.display = "none";
+  facts_content.style.display = "none";
+  lang_content.style.display = "none";
+  general_content.style.display = "none";
+}
+
+//resets things to do with about
+function resetAbout() {
+  staff_button.style.color = button_color;
+  contact_button.style.color = button_color;
+  hideAboutSection();
+  about_content.style.display = "none";
+  staff_content.style.display = "none";
+  contact_content.style.display = "none";
+}
+
+//resets thins to do with support
+function resetSupport() {
+  support_button.style.color = button_color;
+  discuss_button.style.color = button_color;
+  develop_button.style.color = button_color;
+  donate_button.style.color = button_color;
+  hideSupportSection();
+  discuss_content.style.display = "none";
+  develop_content.style.display = "none";
+  donate_content.style.display = "none";
+}
+
+//reset everything to "home page" status
+function reset() {
+  resetProjects();
+  hideProjectSection();
+  resetAbout();
+  hideProjectsNav();
+  resetSupport();
+  hideSupportNav();
+  hideAboutNav();
+  about_button.style.color = button_color;
+  projects_button.style.color = button_color;
+  support_button.style.color = button_color;
+  home_section.style.display = "none";
+  donation_successful_section.style.display = "none";
+  top_bar.style.display = "block";
+  setHash("");
+}
+
+//various reusable functions
+function showProjectsNav() { document.getElementById("projects_bar").style.display = "block"; }
+function hideProjectsNav() { document.getElementById("projects_bar").style.display = "none"; }
+function showSupportNav() { document.getElementById("support_bar").style.display = "block"; }
+function hideSupportNav() { document.getElementById("support_bar").style.display = "none"; }
+function showAboutNav() { document.getElementById("about_bar").style.display = "block"; }
+function hideAboutNav() { document.getElementById("about_bar").style.display = "none"; }
+function showProjectSection() { proj_section.style.display = "block"; }
+function hideProjectSection() { proj_section.style.display = "none"; }
+function showAboutSection() { about_section.style.display = "block"; }
+function hideAboutSection() { about_section.style.display = "none"; }
+function showSupportSection() { support_section.style.display = "block"; }
+function hideSupportSection() { support_section.style.display = "none"; }
+function setTitle(newTitle) { document.title = newTitle; }
+function setHash(hash) { location.hash = hash; }
+
+//scrolls to the given page element unless it is already visible
+function scrollTo(element) {
+  //not functional yet
+}
+
+if (window.location.href) {
+  var href = window.location.href;
+  //alert ("[" + href + "]");
+}
+
+//check if there are any hashtags on the url, if so, do the right javascript to replicate them.
+if(window.location.hash) {
+  var hash = window.location.hash.substring(1); //Puts hash in variable and removes the # character
+  //alert ("[" + hash + "]");
+  //reproduce the state
+  if (hash == projects_hash) {
+     projects();
+  } else if (hash == about_hash) {
+    about();
+  } else if (hash == ents_hash) {
+    ents();
+  } else if (hash == trans_hash) {
+    trans();
+  } else if (hash == facts_hash) {
+    facts();
+  } else if (hash == lang_hash) {
+    langHelp();
+  } else if (hash == staff_hash) {
+    staff();
+  } else if (hash == support_hash) {
+    support();
+  } else if (hash == discuss_hash) {
+    discuss();
+  } else if (hash == develop_hash) {
+    develop();
+  } else if (hash == donate_hash) {
+    donate();
+  } else if (hash == donation_successful_hash) {
+    donationSuccessful();
+  } else if (hash == contact_hash) {
+    contact();
+  } else {
+    //unrecognized hash...
+  }
+} else {
+  //no hash
+  home();
+}
+
+</script>
+
+</body>
+</html>
+
+
+
+
