@@ -1,0 +1,49 @@
+@charset "utf-8";
+/*
+OpenPatterns.net main CSS for desktop and tablet.
+Author: Jason Stockwell
+Copyright OpenPatterns Inc.
+Dec 2016
+*/
+
+/* Text Sizes */
+body { font-size:18px; }
+p { font-size:120%; }
+h1 { font-size:175%; }
+h2 { font-size:130%; }
+h3 { font-size:115%; }
+nav { font-size:130%; }
+/* Fonts */
+body { font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif; }
+/* Width of content */
+body { width: 70%; max-width:1000px; margin:auto }
+/* Alignments */
+p, h2, h3 { text-align:left; }
+header, nav, h1, footer, footer p { text-align:center; }
+/* Borders */
+header, nav, section, footer { border: 1px solid #e0f7fa; }
+/* Margins and Padding */
+header, nav, section, footer { margin: 3px; }
+header { padding: 0px; }
+nav { padding: 3px; }
+nav a {margin: 5px; }
+p { padding-left: 25px; padding-right: 20px; }
+h2, h3 { padding-left: 50px; padding-right: 20px; }
+/* Cursors */
+a { cursor:pointer; }
+
+/* Colors utilize multiple shades of similar colors to provide easy reading
+   and the ability to highlight. */
+
+body { background:#3F51B5; }
+header, nav, footer { background:#1A237E; }
+section { background:#283593; }
+
+/* Opacity for better aliasing. */
+header, h1, footer, p, h2, h3, nav { opacity:0.97; color:#FFFFFF }
+donate { color: #006600; }
+a.link { color: #1DE9B6; }
+/* Line Height */
+p { line-height:1.3 }
+h1 {line-height:1}
+
